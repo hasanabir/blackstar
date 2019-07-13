@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Monoton', cursive;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    transition: all 1s;
+}
+
+.container:hover{
+    width: 100%;
+    height: 100vh;
+}
+
+.container:hover .inner{
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 46% 100%, 0 100%, 0 63%, 0 39%, 0 0);
+}
+
+.container:hover .inner h1, .container:hover .inner h5{
+    opacity: 1;
+}
+
+.container:hover svg{
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.container .inner{
+    height: 100%;
+    background: #21292e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: all 0.5s ease-out;
+}
+
+.container .inner h1{
+    margin-top: 0;
+    font-size: 5rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 2s;
+}
+
+.container .inner h5{
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+svg{
+    width: 200px;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 2s;
+}
+
+
+
